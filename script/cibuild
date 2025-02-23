@@ -2,6 +2,10 @@
 
 set -e
 
+gem install bundler
+bundle install
+
+
 bundle exec jekyll build
 bundle exec htmlproofer ./_site --check-html --check-sri
 bundle exec rubocop -D --config .rubocop.yml
